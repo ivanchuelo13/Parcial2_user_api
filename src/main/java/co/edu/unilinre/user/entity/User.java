@@ -14,7 +14,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name = "users")
+@Table(name = "USERS")
 public class User implements Serializable{
 
 	private static final long serialVersionUID = -1462302884002834226L;
@@ -23,7 +23,7 @@ public class User implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
     private String name;
-	private Long CountryId;
+	private Long country_id;
 	
 	public Long getId() {
 		return id;
@@ -37,15 +37,13 @@ public class User implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Long getCountryId() {
-		return CountryId;
+	public Long getCountry_id() {
+		return country_id;
 	}
-	public void setCountryId(Long countryId) {
-		CountryId = countryId;
+	public void setCountry_id(Long country_id) {
+		this.country_id = country_id;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+
 		
 }
 
